@@ -1,0 +1,2 @@
+win+r
+and pest here "taskschd.msc"
