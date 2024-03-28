@@ -1,2 +1,36 @@
 win+r
 and pest here "taskschd.msc"
+
+To automatically open a file in a web browser using Task Scheduler in Windows, you can schedule a task to run a batch script that opens the file using the default web browser. Here's how you can do it:
+
+Create a batch script: Create a new text file with a .bat extension (e.g., open_browser.bat). Right-click on the file and choose "Edit" to open it in Notepad or any other text editor.
+
+Write the script: Inside the batch file, use the start command followed by the URL or file path you want to open in the web browser. For example:
+
+batch
+Copy code
+start "" "C:\path\to\your\file.html"
+Replace "C:\path\to\your\file.html" with the path to the file you want to open. You can use both local file paths or URLs.
+
+Save the batch script: After writing the script, save the batch file.
+
+Open Task Scheduler: Follow the steps mentioned earlier to open Task Scheduler.
+
+Create a new task: Click on "Create Basic Task" or "Create Task" in the right-hand pane, depending on your version of Windows.
+
+Set a name and description: Give your task a name and, optionally, a description to help identify it later.
+
+Trigger: Choose how often you want the task to run. Since you want to open the file in the browser, you might want to set it to run manually or at login.
+
+Action: Choose "Start a program" as the action. In the "Program/script" field, enter the path to cmd.exe (usually located in C:\Windows\System32\cmd.exe). In the "Add arguments (optional)" field, enter the path to your batch file.
+
+Finish: Review your settings and click "Finish" to create the task.
+
+
+
+in mysqlbackup.bat
+Create a new text file with a .bat extension, let's call it open_php_file.bat.
+
+Edit the batch file and add the following line:
+start "" "http://localhost/php/db_backup/smtp/index.php"
+Replace "your_php_file.php" with the name of your PHP file located in the D:\Xampp\htdocs\php\db_backup\smtp directory.
